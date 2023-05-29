@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import ReactCountryFlag from "react-country-flag";
 import { Parallax } from "react-parallax";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [currentTime, setCurrentTime] = useState();
@@ -59,118 +60,126 @@ const Hero = () => {
 
   return (
     <>
-    <Parallax className="bg-local bg-cover bg-center bg-no-repeat" strength={500} bgImage="/assistes/bg.png">
-
-      <div
-        className=" flex  flex-col justify-between  md:px-[30px]      h-screen  
-      px-[60px] sm:px-[25px]   "
+      <Parallax
+        className="bg-local bg-cover bg-center bg-no-repeat"
+        strength={500}
+        bgImage="/assistes/bg.png"
       >
         <div
-          className=" child-div grid grid-cols-3  sm:pt-[20px] items-center   justify-between  
-       pt-[2%]"
+          className=" flex  flex-col justify-between  md:px-[30px]      h-screen  
+      px-[60px] sm:px-[25px]   "
         >
-          <div className=" flex   ">
-            <img
-              className="  lg:w-[65.96px] w-[25px] mr-[39px] sm:mr-2 h-[20px] lg:h-[50px]  "
-              src="/assistes/1.png"
-              alt="asd"
-            />
-            <img
-              className=" sm:hidden  lg:w-[184.9px] w-[25px] h-[20px] lg:h-[50px]  lg:mr-[39px] mr-3  "
-              src="/assistes/3.png"
-              alt="asd"
-            />
-            <p className=" text-white uppercase sm:mt-1   mt-[25px] text-xs tracking-[2px] ">
-              about
-            </p>
-          </div>
-          <div className=" flex justify-center ">
-            <img
-              className="  lg:w-[204.38px]  w-[100px] h-[auto]  "
-              src="/assistes/2.png"
-              alt="asd"
-            />
-          </div>
-          <div className="flex mt-0  justify-end ">
-            <div className="text-white sm:hidden mr-2 text-end ">
-              <p className=" text-sm tracking-[2px] ">
-                {currentTime}{" "}
-                <span className=" text-sm sm:text-xs ml-2 tracking-[2px]  ">
-                  {countryName}
-                </span>
-              </p>
-              <p className="text-end  text-sm tracking-[2px] ">{`${currentDate} `}</p>
-            </div>
-            <div className="text-white sm:pt-0  pt-[7px] sm:justify-between  flex  ">
-              <ReactCountryFlag
-                className="sm:ml-4 ml-3"
-                countryCode={countryCode}
-                svg
-                style={{
-                  width: "37.31px",
-                  height: "25px",
-                }}
-                title={countryCode}
-              />
-
-              <img
-                src="/assistes/6.png"
-                className="w-[20.89px] h-[25px] mx-3 sm:mx-0 sm:ml-3 ml-[40px]"
-                alt="sad"
-              />
-
-              <img
-                src="/assistes/5.png"
-                className="w-[20.89px] h-[25px] ml-3 sm:ml-3 ml-[40px]"
-                alt="asdasd"
-              />
-            </div>
-          </div>
-          <div className=" mt-[30px]  text-white flex">
-            <button className="text-white flex" >
-
-            <img
-              src="/assistes/back.png"
-              className=" w-[22px] mt-2 sm:mt-1 mr-2  h-[16px] "
-              alt="asdas"
-              />
-            <p className=" uppercase sm:text-[17px] text-[22px] tracking-[4px] ">
-              back
-            </p>
-              </button>
-          </div>
-        </div>
-
-        <div className=" child-div text-white">
-          <p  data-aos="zoom-in-down"
-            className=" uppercase sm:text-[20px]  md:text-[30px] text-[40px] 
-           tracking-[4px]    "
+          <div
+            className=" child-div grid grid-cols-3  sm:pt-[20px] items-center   justify-between  
+       pt-[2%]"
           >
-            discover
-          </p>
-          <p className=" uppercase   text-[60px] sm:text-[35px] tracking-[3px]">
-            A NEW WORLD
-          </p>
-          <p className=" uppercase text-[20px] sm:text-[16px]    text-[#A9A6A6] tracking-[3px]  ">
-            FOR THOSE WHO WISH FOR MORE...
-          </p>
-        </div>
+            <div className=" flex   ">
+              <img
+                className="  lg:w-[65.96px] w-[25px] mr-[39px] sm:mr-2 h-[20px] lg:h-[50px]  "
+                src="/assistes/1.png"
+                alt="asd"
+              />
+              <img
+                className=" sm:hidden  lg:w-[184.9px] w-[25px] h-[20px] lg:h-[50px]  lg:mr-[39px] mr-3  "
+                src="/assistes/3.png"
+                alt="asd"
+              />
+              <p className=" text-white uppercase sm:mt-1   mt-[25px] text-xs tracking-[2px] ">
+                about
+              </p>
+            </div>
+            <div className=" flex justify-center ">
+              <img
+                className="  lg:w-[204.38px]  w-[100px] h-[auto]  "
+                src="/assistes/2.png"
+                alt="asd"
+              />
+            </div>
+            <div className="flex mt-0  justify-end ">
+              <div className="text-white sm:hidden mr-2 text-end ">
+                <p className=" text-sm tracking-[2px] ">
+                  {currentTime}{" "}
+                  <span className=" text-sm sm:text-xs ml-2 tracking-[2px]  ">
+                    {countryName}
+                  </span>
+                </p>
+                <p className="text-end  text-sm tracking-[2px] ">{`${currentDate} `}</p>
+              </div>
+              <div className="text-white sm:pt-0  pt-[7px] sm:justify-between  flex  ">
+                <ReactCountryFlag
+                  className="sm:ml-4 ml-3"
+                  countryCode={countryCode}
+                  svg
+                  style={{
+                    width: "37.31px",
+                    height: "25px",
+                  }}
+                  title={countryCode}
+                />
 
-        <div className=" child-div grid   grid-cols-1  ">
-          <p  className=" text-[#A9A6A6] mb-[40px] text-center text-[20px] sm:text-[16px] tracking-[3px] ">
-            Bringing the world closer together
-          </p>
-          
-          <a className="justify-self-center" href="#realState">
-            <img
-              src="/assistes/down.png"
-              className="  w-[40px] mb-5  "
-              alt=""
-            />
-          </a>
+                <img
+                  src="/assistes/6.png"
+                  className="w-[20.89px] h-[25px] mx-3 sm:mx-0 sm:ml-3 ml-[40px]"
+                  alt="sad"
+                />
+
+                <img
+                  src="/assistes/5.png"
+                  className="w-[20.89px] h-[25px] ml-3 sm:ml-3 ml-[40px]"
+                  alt="asdasd"
+                />
+              </div>
+            </div>
+            <div className=" mt-[30px]  text-white flex">
+              <button className="text-white flex">
+                <img
+                  src="/assistes/back.png"
+                  className=" w-[22px] mt-2 sm:mt-1 mr-2  h-[16px] "
+                  alt="asdas"
+                />
+                <p className=" uppercase sm:text-[17px] text-[22px] tracking-[4px] ">
+                  back
+                </p>
+              </button>
+            </div>
+          </div>
+
+          <div className=" child-div text-white">
+            <p
+              data-aos="zoom-in-down"
+              className=" uppercase sm:text-[20px]  md:text-[30px] text-[40px] 
+           tracking-[4px]    "
+            >
+              discover
+            </p>
+            <p className=" uppercase   text-[60px] sm:text-[35px] tracking-[3px]">
+              A NEW WORLD
+            </p>
+            <p className=" uppercase text-[20px] sm:text-[16px]    text-[#A9A6A6] tracking-[3px]  ">
+              FOR THOSE WHO WISH FOR MORE...
+            </p>
+          </div>
+
+          <div className=" child-div grid   grid-cols-1  ">
+            <p className=" text-[#A9A6A6] mb-[40px] text-center text-[20px] sm:text-[16px] tracking-[3px] ">
+              Bringing the world closer together
+            </p>
+
+            <motion.a
+              whileHover={{ scale: 2.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="justify-self-center"
+              href="#realState"
+            >
+              <img
+                src="/assistes/down.png"
+                className="  w-[40px] mb-5  "
+                alt=""
+              />
+            </motion.a>
+          </div>
         </div>
-      </div>
-        </Parallax>
+      </Parallax>
     </>
   );
 };

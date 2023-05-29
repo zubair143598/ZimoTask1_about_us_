@@ -86,15 +86,15 @@ const Category = () => {
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-5.png" alt="" />
-          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >TRAVEL THE WORLD</p>
+          <p className="absolute pl-[5rem] text-[20px] bottom-[2rem] text-white text-center " >TRAVEL THE WORLD</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-6.png" alt="" />
-          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >PRIVATE ISLANDS</p>
+          <p className="absolute pl-[6rem] text-[20px] bottom-[2rem] text-white text-center " >PRIVATE ISLANDS</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-7.png" alt="" />
-          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >jets</p>
+          <p className="absolute pl-[9rem] text-[20px] bottom-[2rem] text-white text-center " >jets</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-8.png" alt="" />

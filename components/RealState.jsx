@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { motion } from "framer-motion";
 
 const RealState = () => {
   return (
@@ -45,13 +46,15 @@ const RealState = () => {
       </div>
       <div  className=" grid pb-4    grid-cols-1  ">
 
-        <a  href="#category" className="justify-self-center">
+        <motion.a 
+              whileHover={{ scale: 2.1 }}
+              whileTap={{ scale: 0.9 }}  href="#category" className="justify-self-center">
           <img
             src="/assistes/downb.png"
             className="  w-[40px]  "
             alt=""
           />
-        </a>
+        </motion.a>
       </div>
     </div>
   );
