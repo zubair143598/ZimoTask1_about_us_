@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -68,31 +69,40 @@ const Category = () => {
 
       <Slider className="mt-[90px] sm:mt-[30px] " {...settings} ref={sliderRef}>
         <div>
-          <img className=" px-3" src="/assistes/Rectangle-1.png" alt="" />
+          <img className=" relative px-3" src="/assistes/Rectangle-1.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >Cars</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-2.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >YACHTS</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-3.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >WATCHES</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-4.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >DIAMONDS</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-5.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >TRAVEL THE WORLD</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-6.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >PRIVATE ISLANDS</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-7.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >jets</p>
         </div>
         <div>
           <img className=" px-3" src="/assistes/Rectangle-8.png" alt="" />
+          <p className="absolute pl-[8rem] text-[20px] bottom-[2rem] text-white text-center " >REAL ESTATE</p>
         </div>
       </Slider>
       <div className=" text-center sm:text-left sm:mt-[30px] mt-[90px] ">
+        
         <p className=" sm:text-[15px] text-[25px] ">
           one platform for all premium listing
         </p>

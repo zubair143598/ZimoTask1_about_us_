@@ -8,12 +8,13 @@ import Personalised from "@/components/Personalised ";
 import { useEffect, useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
-import BGcgeak from "@/components/BGcgeak";
-import { motion, useScroll } from "framer-motion"
+import ScrollComponent from "@/components/ScrollComponent";
+
+// import { motion, useScroll } from "framer-motion"
 
 
 export default function Home() {
-  const scrollRef = useRef(null)
+  // const scrollRef = useRef(null)
   useEffect(() => {
     AOS.init({
       
@@ -31,21 +32,21 @@ export default function Home() {
       <main>
       <div className=" h-screen">
      
-     
+     <ScrollComponent/>
      <Hero/>
      <RealState/>
      <Category/>
      <Entry/>
     <Personalised/>
-     {/* <BGcgeak/> */}
+  
     
-     <div ref={scrollRef} style={{ overflow: "scroll" }}>
+     {/* <div ref={scrollRef} style={{ overflow: "scroll" }}>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ root: scrollRef }}
       />
-    </div>
+    </div> */}
     
     </div>
       </main>
